@@ -1,0 +1,6 @@
+emplist
+*.so
+*.o
+*.idy
+*.int
+*.lst

@@ -41,6 +41,7 @@
            PERFORM PRINT-EMPLOYEES
                VARYING WS-INDEX FROM 1 BY 1
                UNTIL WS-INDEX > 5
+           PERFORM PRINT-FOOTER
            STOP RUN.
 
        LOAD-EMPLOYEES.
@@ -82,3 +83,8 @@
            MOVE WS-EMP-DEPT(WS-INDEX) TO WS-OUT-DEPT
            MOVE WS-EMP-SALARY(WS-INDEX) TO WS-OUT-SALARY
            DISPLAY WS-LINE.
+
+       PRINT-FOOTER.
+           DISPLAY "========================================"
+           DISPLAY " TOTAL EMPLOYEES: 5"
+           DISPLAY "========================================".
